@@ -1,10 +1,12 @@
 {
   "name": "new-react-app",
   "version": "0.0.0",
+  "homepage": "https://calmohtml.github.io/crypto-viewer-react",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^17.0.0",
@@ -12,6 +14,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react-refresh": "^1.3.1",
+    "gh-pages": "^3.2.3",
     "sass": "^1.35.1",
     "vite": "^2.3.8"
   }
