@@ -35,16 +35,36 @@ export const Cryptos = () => {
             </figure>
             <div className="cryptocurrency__name">
               <h2>
-                {currency.symbol.toUpperCase()} - ${currency.current_price}
+                {currency.symbol.toUpperCase()}:{" "}
+                {new Intl.NumberFormat("es-US", {
+                  style: "currency",
+                  currency: "USD",
+                  useGrouping: true,
+                }).format(currency.current_price)}
               </h2>
               <p className="cryptocurrency__info">
-                24h/Low: ${currency.low_24h}
+                24h/Low:{" "}
+                {new Intl.NumberFormat("es-US", {
+                  style: "currency",
+                  currency: "USD",
+                  useGrouping: true,
+                }).format(currency.low_24h)}
               </p>
               <p className="cryptocurrency__info">
-                24h/High: ${currency.high_24h}
+                24h/High:{" "}
+                {new Intl.NumberFormat("es-US", {
+                  style: "currency",
+                  currency: "USD",
+                  useGrouping: true,
+                }).format(currency.high_24h)}
               </p>
               <p className="cryptocurrency__info">
-                Market Cap: ${currency.market_cap}
+                Market Cap:{" "}
+                {new Intl.NumberFormat("es-US", {
+                  style: "currency",
+                  currency: "USD",
+                  useGrouping: true,
+                }).format(currency.market_cap)}
               </p>
             </div>
           </li>
